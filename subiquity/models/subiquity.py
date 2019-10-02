@@ -200,6 +200,9 @@ class SubiquityModel:
                     '/snap/bin/subiquity.subiquity-configure-apt',
                     sys.executable, str(self.network.has_network).lower(),
                     ],
+                '002-configure-run': [
+                    '/snap/bin/subiquity.subiquity-deploy-custom',
+                    ],
                 },
 
             'grub': {

@@ -13,6 +13,8 @@ apps:
     command: usr/bin/subiquity-configure-apt
   subiquity-configure-run:
     command: usr/bin/subiquity-configure-run
+  subiquity-deploy-custom:
+    command: usr/bin/subiquity-deploy-custom
   console-conf:
     command: usr/bin/console-conf
   probert:
@@ -68,6 +70,7 @@ parts:
       'bin/subiquity-service': usr/bin/subiquity-service
       'bin/subiquity-configure-apt': usr/bin/subiquity-configure-apt
       'bin/subiquity-configure-run': usr/bin/subiquity-configure-run
+      'bin/subiquity-deploy-custom': usr/bin/subiquity-deploy-custom
   users-and-groups:
     plugin: dump
     build-packages:
