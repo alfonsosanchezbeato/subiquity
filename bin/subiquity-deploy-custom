@@ -1,0 +1,11 @@
+#!/bin/bash -eux
+
+# Run customization script
+
+if [ -z "$TARGET_MOUNT_POINT" ]; then
+    # Nothing good can happen from running this script without
+    # TARGET_MOUNT_POINT set.
+    exit 1;
+fi
+
+/cdrom/casper/deploy-custom.sh "$TARGET_MOUNT_POINT"
