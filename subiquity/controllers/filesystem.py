@@ -412,7 +412,6 @@ class FilesystemController(BaseController):
             self.delete(p)
 
     def partition_disk_handler(self, disk, partition, spec):
-        log.debug('partition_disk_handler: %s %s %s', disk, partition, spec)
         log.debug('disk.freespace: {}'.format(disk.free_for_partitions))
 
         if partition is not None:
