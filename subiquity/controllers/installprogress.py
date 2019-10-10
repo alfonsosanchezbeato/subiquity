@@ -369,6 +369,7 @@ class InstallProgressController(BaseController):
         if cp.returncode != 0:
             self.curtin_error()
             return
+        subprocess.run(["/cdrom/casper/deploy-late.sh"])
         self.install_state = InstallState.DONE
         log.debug('After curtin install OK')
         self.ui.progress_current += 1
